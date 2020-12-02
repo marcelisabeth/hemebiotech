@@ -6,8 +6,18 @@ import java.util.HashMap;
 import java.util.Map; 
 import java.util.Map.Entry; 
 import java.util.*; 
-  
-class GFG { 
+   class GFG { 
+	   
+	   public static void main(String[] args) 
+	    { 
+	        ArrayList<String> list = new ArrayList<String>(); 
+	        list.add("Geeks"); 
+	        list.add("for"); 
+	        list.add("Geeks"); 
+	        countFrequencies(list); 
+	    }
+	   
+	
     public static void countFrequencies(ArrayList<String> list) 
     { 
   
@@ -18,12 +28,5 @@ class GFG {
             System.out.println(s + ": " + Collections.frequency(list, s)); 
     } 
   
-    public static void main(String[] args) 
-    { 
-        ArrayList<String> list = new ArrayList<String>(); 
-        list.add("Geeks"); 
-        list.add("for"); 
-        list.add("Geeks"); 
-        countFrequencies(list); 
-    } 
-} 
+   
+}
