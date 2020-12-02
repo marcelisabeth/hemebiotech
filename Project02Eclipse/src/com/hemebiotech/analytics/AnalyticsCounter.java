@@ -36,7 +36,32 @@ public class AnalyticsCounter {
 		}
 		fileReader.close();
 		
+		
+//Décompte des symptomes		
+		
+public class countFrequencies {
+	
+	public static void countFrequencies(ArrayList<String> List)
+    {
+ 
 
+        Set<String> st = new HashSet<String>(List);
+        for (String s : st)
+            System.out.println(s + ": " + Collections.frequency(List, s));
+    }
+ 
+    public static void main(String[] args)
+    {
+     
+        ArrayList<String> lineList = new ArrayList<String>();
+        countFrequencies(lineList);
+    }
+	
+}
+	 		
+		
+		
+		
 // Classement par odre alphabétique
 		Collections.sort(lineList);
 
