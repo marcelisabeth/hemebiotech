@@ -33,8 +33,6 @@ public class AnalyticsCounter {
 		while ((listSymptoms = bufferedReader.readLine()) != null) {
 			lineList.add(listSymptoms);
 
-// Affichage a l'écran de ma liste de symptomes dans mon fichier original			
-			System.out.println(listSymptoms);
 		}
 		fileReader.close();
 
