@@ -2,43 +2,48 @@ package com.hemebiotech.analytics;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
-import java.util.Set;
-import java.util.TreeSet;
 
 /**
  * Simple brute force implementation
  *
  */
-public class ReadSymptomDataFromFile {
+public class ReadSymptomDataFromFile implements ISymptomReader {
+
+	private String filepath;
 	
-	// Ce fichier récupére le résultat de l'opération de classement		
-			String fileResult = "Project02Eclipse/FileResult.out";
-
-	// Déclaration de ma variable liste		
-			List<String> lineList = new ArrayList<String>();
-			while ((listSymptoms = bufferedReader.readLine()) != null) {
-				lineList.add(listSymptoms);
-
-			}
-			fileReader.close();
-	// Classement par ordre alphabétique
-
-			Set<String> lt = new TreeSet<String>(lineList);
-
-			FileWriter fileWriter = new FileWriter(fileResult);
-//			PrintWriter out = new PrintWriter(fileWriter);
-			for (String s : lt) {
-//				out.println(s + ": " + Collections.frequency(lineList, s));
-				fileWriter.write(s + ": " + Collections.frequency(lineList, s) + "\n");
+	/**
+	 * 
+	 * @param filepath a full or partial path to file with symptom strings in it, one per line
+	 */
+	public ReadSymptomDataFromFile (String filepath) {
+		this.filepath = filepath;
+	}
+	
+	@Override
+	public List<String> getSymptoms() {
+		ArrayList<String> result = new ArrayList<String>();
+		
+		if (filepath != null) {
+			try {
+				BufferedReader reader = new BufferedReader (new FileReader(filepath));
+				String line = reader.readLine();
 				
+				while (line != null) {
+					result.add(line);
+					line = reader.readLine();
+				}
+				reader.close();
+			} catch (IOException e) {
+				e.printStackTrace();
 			}
-//			out.flush();
-//			out.close();
-			fileWriter.close();
-			
+		}
+		
+		return result;
+	}
+
+
+
 }
