@@ -16,34 +16,17 @@ public class AnalyticsCounter {
 
 	public static void main(String[] args) throws Exception {
 		List<String> lineList = new ArrayList<String>();
-  
+        // Lecture du fichier d'entrée //
         ReadSymptomDataFromFile reader = new ReadSymptomDataFromFile("Project02Eclipse/symptoms.txt");	
         lineList = reader.getSymptoms();
-        
+        // Comptage et tri des symptomes //
         TreeMap <String, Integer> treeMapCounter = new TreeMap <String, Integer> () ;
         SymptomCounter symptomCounter = new SymptomCounter () ;
         treeMapCounter = symptomCounter.countSymptoms(lineList);
-
+        // Ecriture dans le fichier de sortie //
+        SymptomWriter writer = new SymptomWriter () ;
+        writer.writeSymptom(treeMapCounter);
   
-// Ce fichier récupére le résultat de l'opération de classement		
-		String fileResult = "Project02Eclipse/FileResult.out";
-
-
-
-// Classement par ordre alphabétique
-
-		Set<String> lt = new TreeSet<String>(lineList);
-
-		FileWriter fileWriter = new FileWriter(fileResult);
-//		PrintWriter out = new PrintWriter(fileWriter);
-		for (String s : lt) {
-//			out.println(s + ": " + Collections.frequency(lineList, s));
-			fileWriter.write(s + ": " + Collections.frequency(lineList, s) + "\n");
-			
-		}
-//		out.flush();
-//		out.close();
-		fileWriter.close();
         
 	}
 }
