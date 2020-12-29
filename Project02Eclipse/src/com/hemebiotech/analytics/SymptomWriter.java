@@ -1,5 +1,6 @@
 package com.hemebiotech.analytics;
 
+import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.util.Collections;
 import java.util.Map;
@@ -10,17 +11,21 @@ public class SymptomWriter implements ISymptomWriter{
 	@Override
 	public void writeSymptom(TreeSet treeSetSymptom) {
 		FileWriter fileWriter = new FileWriter("Project02Eclipse/FileResult.out");
-
-		// TODO Auto-generated method stub
-		for (String s : treeSetSymptom) {
-//			out.println(s + ": " + Collections.frequency(lineList, s));
-			fileWriter.write(s + ": " + Collections.frequency(lineList, s) + "\n");
+		BufferedWriter out = new BufferedWriter(fileWriter); // ajout code
+		
+		
+		for (Map.Entry<String, String> entry : sortMap.entrySet()) { //ajout code
+			System.out.println( entry.getKey() + " : " + entry.getKey() + "\n" ); //ajout code
+			System.out.println("Le comptage est terminé."); // ajout code
 			
-							
+			out.flush(); //ajout code
 		}
-		
-		
-		
+
+		out.close(); //ajout code
+
+			     
+			 }
+	
 	}
 
-}
+
