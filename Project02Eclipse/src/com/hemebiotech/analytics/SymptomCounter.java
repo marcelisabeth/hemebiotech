@@ -3,20 +3,29 @@ package com.hemebiotech.analytics;
 import java.util.List;
 import java.util.TreeMap;
 
+
+/**		
+ * @author melisabeth
+ *
+ */
+
 public class SymptomCounter implements ISymptomCounter {
 
-
+/**		 
+ * Si le symptome existe déjà dans la TreeMap, on incrémente la valeur.
+ * Si le symptome n'existe pas, on le crée dans la TreeMap.
+ * 
+ * @param listSymptoms list of symptoms
+ * 
+ * @return TreeMap 
+ */
+ 
 	@Override
 	    public TreeMap<String, Integer> countSymptoms(List<String> listSymptoms) {
 		
 		TreeMap<String, Integer> treeMapResult = new TreeMap();
 		
-/**		
-     * 
-     * Si le symptome existe déjà dans la TreeMap, on incrémente la valeur.
-     * Si le symptome n'existe pas, on le crée dans la TreeMap.
-     * 
- */
+
 		for (String symptom : listSymptoms) {
 			Integer currentCount = treeMapResult.get(symptom);
 			if (currentCount != null) { 
@@ -27,12 +36,6 @@ public class SymptomCounter implements ISymptomCounter {
 			}
 
 		}
-
-/**
-		 *  @return une instance de TreeMap suite à une boucle.
-		 *  
-		 *
-*/
 	
 		return treeMapResult;
 	}

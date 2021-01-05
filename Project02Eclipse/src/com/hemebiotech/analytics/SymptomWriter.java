@@ -9,8 +9,28 @@ import java.util.Map.Entry;
 import java.util.TreeMap;
 import java.util.TreeSet;
 
+/**
+ * 
+ * Créer automatiquement un fichier de sortie
+ * permettant de stocker la liste de symptomes.
+ * 
+ * @author melisabeth
+*/
+
 public class SymptomWriter implements ISymptomWriter{
 
+	
+	/**
+	    * 
+	    * Boucle permettant d'écrire les symptomes dans le fichier
+	    * de sortie "Project02Eclipse/FileResult.out".
+	    * 
+	    * Une clé correspondant au symptome et une valeur correspondant
+	    * à l'occurence du symptome sont écrites dans le fichier
+	    * 
+	    * 
+	 */
+	
 	@Override
 	public void writeSymptom(Map <String, Integer> treeMapSymptom) throws IOException {
 		FileWriter fileWriter = new FileWriter("Project02Eclipse/FileResult.out");

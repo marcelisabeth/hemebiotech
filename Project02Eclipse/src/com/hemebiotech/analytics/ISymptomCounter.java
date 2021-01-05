@@ -4,7 +4,10 @@ import java.util.List;
 import java.util.TreeMap;
 
 /**
+    * @author melisabeth
+    * 
     * Interface allowing to count the number of symptoms in the file
+    *
     *
     */
 
