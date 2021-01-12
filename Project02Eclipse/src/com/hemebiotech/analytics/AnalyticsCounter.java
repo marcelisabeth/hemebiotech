@@ -12,16 +12,24 @@ import java.util.Set;
 import java.util.TreeMap;
 import java.util.TreeSet;
 
-/** 
-     *  
-     * @author melisabeth
-     *
-     * Lecture du fichier d'entrée "Project02Eclipse/symptoms.txt" représentant la liste des symptomes
-     * sans classement particulier
-     *
-     *
+
+/**
+ * @author melisabeth
+ * Read file "symptoms.txt" without particular order
  */
+
+
 public class AnalyticsCounter {
+	
+/**
+ * Création et initialisation d'une Treemap
+ * permettant de compter et trier les symptomes
+ * 
+ * 
+ * @throws
+ * @param treeMapCounter
+ * 
+ */	
 
 	public static void main(String[] args) throws Exception {
 		List<String> lineList = new ArrayList<String>();
@@ -30,17 +38,11 @@ public class AnalyticsCounter {
         ReadSymptomDataFromFile reader = new ReadSymptomDataFromFile("Project02Eclipse/symptoms.txt");	
         lineList = reader.getSymptoms();
         
-/**
-     * Création et initialisation d'une Treemap
-     * permettant de compter et trier les symptomes
-     */
+
         TreeMap <String, Integer> treeMapCounter = new TreeMap <String, Integer> () ;
         SymptomCounter symptomCounter = new SymptomCounter () ;
         treeMapCounter = symptomCounter.countSymptoms(lineList);
         
-/**
-     * Ecriture dans le fichier de sortie
-     */
         SymptomWriter writer = new SymptomWriter () ;
         writer.writeSymptom(treeMapCounter);
   

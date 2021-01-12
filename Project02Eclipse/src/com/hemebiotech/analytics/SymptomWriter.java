@@ -3,11 +3,8 @@ package com.hemebiotech.analytics;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.Collections;
 import java.util.Map;
 import java.util.Map.Entry;
-import java.util.TreeMap;
-import java.util.TreeSet;
 
 /**
  * 
@@ -22,12 +19,8 @@ public class SymptomWriter implements ISymptomWriter{
 	
 	/**
 	    * 
-	    * Boucle permettant d'écrire les symptomes dans le fichier
-	    * de sortie "Project02Eclipse/FileResult.out".
 	    * 
-	    * Une clé correspondant au symptome et une valeur correspondant
-	    * à l'occurence du symptome sont écrites dans le fichier
-	    * 
+	    * @param treeMapSymtom order symptoms listing
 	    * 
 	 */
 	

@@ -6,11 +6,8 @@ import java.util.TreeMap;
 import java.util.TreeSet;
 
 /**
-    * 
     * @author melisabeth
-    * 
-    * 
-    * 
+    * Write a symptoms listing order in a text file "FileResult.out"
     * 
  */
 
@@ -18,7 +15,7 @@ public interface ISymptomWriter {
 	
 /**
 	 * 
-	 * 
+	 * @throws
 	 * 
 */
 
