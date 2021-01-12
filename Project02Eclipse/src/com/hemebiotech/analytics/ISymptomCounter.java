@@ -4,15 +4,16 @@ import java.util.List;
 import java.util.TreeMap;
 
 /**
- * @author melisabeth
+ *
  * Interface allowing to count the number of symptoms in the file
+ * @author melisabeth
+ * 
  */
-
 public interface ISymptomCounter {
 	
 /**
- * If no data is available, return an empty List
- * @param listSymptoms
+ * 
+ * @param listSymptoms count symptoms in the listing
  * @return orders a list of symptoms in alphabetical order, specifying the number of occurrences
  */
 

@@ -8,22 +8,14 @@ import java.util.Map.Entry;
 
 /**
  * 
- * Créer automatiquement un fichier de sortie
- * permettant de stocker la liste de symptomes.
- * 
+ * Automatically create an output file 
+ * to store the list of symptoms
  * @author melisabeth
 */
-
 public class SymptomWriter implements ISymptomWriter{
 
 	
-	/**
-	    * 
-	    * 
-	    * @param treeMapSymtom order symptoms listing
-	    * 
-	 */
-	
+
 	@Override
 	public void writeSymptom(Map <String, Integer> treeMapSymptom) throws IOException {
 		FileWriter fileWriter = new FileWriter("Project02Eclipse/FileResult.out");

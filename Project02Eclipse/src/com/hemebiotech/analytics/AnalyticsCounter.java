@@ -14,23 +14,17 @@ import java.util.TreeSet;
 
 
 /**
- * @author melisabeth
+ * 
  * Read file "symptoms.txt" without particular order
+ * @author melisabeth
  */
-
-
 public class AnalyticsCounter {
 	
-/**
- * Création et initialisation d'une Treemap
- * permettant de compter et trier les symptomes
- * 
- * 
- * @throws
- * @param treeMapCounter
- * 
- */	
-
+    /**
+     * 
+     * @param args string array arguments
+     * @throws Exception java.lang.Exception
+     */
 	public static void main(String[] args) throws Exception {
 		List<String> lineList = new ArrayList<String>();
        

@@ -4,22 +4,20 @@ import java.util.List;
 import java.util.TreeMap;
 
 
-/**		
- * @author melisabeth
+/**
  *
+ * If the symptom already exists in the TreeMap, the value is increased.
+ * If the symptom does not exist, it is created in the TreeMap.
+ * * @author Marc ELISABETH
  */
 
 public class SymptomCounter implements ISymptomCounter {
 
 /**		 
- * Si le symptome existe déjà dans la TreeMap, on incrémente la valeur.
- * Si le symptome n'existe pas, on le crée dans la TreeMap.
- * 
  * @param listSymptoms list of symptoms
  * 
  * @return TreeMap 
  */
- 
 	@Override
 	    public TreeMap<String, Integer> countSymptoms(List<String> listSymptoms) {
 		
